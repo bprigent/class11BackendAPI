@@ -102,7 +102,7 @@ The **server/db.js** file exports helper functions for working with the database
   - name: string
   - description: string
   - numWeeks: number
-  - weeklyRevenue: number
+
 - Meeting
   - time: string
   - date: JS `Date` object
