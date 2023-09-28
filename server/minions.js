@@ -1,19 +1,29 @@
 const express = require('express');
 const minionRouter = express.Router();
 const morgan = require('morgan');
+const db = require('./db');
+const getAllFromDatabase = db.getAllFromDatabase;
+const addToDatabase = db.addToDatabase;
 
 //set up proper logging
 minionRouter.use(morgan('tiny'));
 
 //get the param minionId
 
+
 // GET - /api/minions to get an array of all minions.
 minionRouter.get('/',(req, res, next) => {
-    console.log("this is the minionRouter - Get - /api/minions");
-    res.send('hello')
+    const data = getAllFromDatabase('minions');
+    res.send(data);
 });
 
 // POST - /api/minions to create a new minion and save it to the database.
+minionRouter.post('/',(req, res, next) => {
+    const data = req.body;
+    addToDatabase('minions', data)
+    res.send(data);
+});
+
 
 // GET - /api/minions/:minionId to get a single minion by id.
 

@@ -272,22 +272,5 @@ module.exports = {
   deleteFromDatabasebyId,
   deleteAllFromDatabase,
 };
-const minion = [
-  {id:'1', name: 'minion 1', title:'head chef', salary:1000},
-  {id:'2', name: 'minion 2', title:'sous chef', salary:2000},
-  {id:'3', name: 'minion 3', title:'comis', salary:3000},
-];
 
-const idea = [
-  {id:'1', name: 'idea 1', description:'Lorem Ipsum Dolore', numWeeks:10, weeklyRevenue:100},
-  {id:'2', name: 'idea 2', description:'Lorem Ipsum Dolore', numWeeks:20, weeklyRevenue:200},
-  {id:'3', name: 'idea 3', description:'Lorem Ipsum Dolore', numWeeks:30, weeklyRevenue:300},
-];
-
-const meeting = [
-  {time:'9 am', date: '2021-12-22T12:34:32', day:'Monday', note:"Lorem Ipsum Dolore"},
-  {time:'10 am', date: '2021-12-22T12:34:32', day:'Tuesday', note:"Lorem Ipsum Dolore"},
-];
-
-module.exports = minion;
 
