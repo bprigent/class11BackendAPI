@@ -26,6 +26,12 @@ minionRouter.post('/',(req, res, next) => {
 
 
 // GET - /api/minions/:minionId to get a single minion by id.
+minionRouter.get('/:minionId',(req, res, next) => {
+    const minionId = req.params.minionId;
+    const data = db.getFromDatabaseById('minions', minionId)
+    res.send(data);
+});
+
 
 // PUT - /api/minions/:minionId to update a single minion by id.
 
